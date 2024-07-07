@@ -1,6 +1,6 @@
-import Button from "./Button/Button";
-import Input from "./Input/Input";
-import Text from "./Text/Text";
-import Switcher from "./Switcher/Switcher";
+import MyButton from "./MyButton/MyButton";
+import MyInput from "./MyInput/MyInput";
+import MyText from "./MyText/MyText";
+import MySwitcher from "./MySwitcher/MySwitcher";
 
-export {Button, Input, Text, Switcher};
+export { MyButton, MyInput, MyText, MySwitcher };
