@@ -8,7 +8,8 @@ module.exports = {
         filename: "index.js",
         path: path.resolve(__dirname, 'dist'),
         libraryTarget: "umd",
-        clean: true
+        clean: true,
+         globalObject: `typeof self !== 'undefined' ? self : this`
     },
     resolve: {
         extensions: ['.ts', '.tsx']
