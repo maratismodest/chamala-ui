@@ -7,14 +7,10 @@ export interface ButtonProps extends ComponentPropsWithoutRef<'button'> {
     big?: boolean;
 }
 
-const classes = ["button"];
-
 export default function Button({children, className, color, big, ...props}: ButtonProps) {
+    const classes = ["button"];
     if (big) {
-        classes.push("button__big");
-    }
-    if (className) {
-        classes.push(className)
+        classes.push("button_big");
     }
 
     return (

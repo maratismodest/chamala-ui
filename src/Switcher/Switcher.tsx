@@ -20,7 +20,10 @@ const Switcher: FC<SwitcherProps> = ({
     if (checked) {
         classes.push("switcher_checked");
     } else {
-        classes.splice(classes.indexOf("switcher_checked"), 1)
+        const index = classes.indexOf("switcher_checked");
+        if (index > -1) { // only splice array when item is found
+            classes.splice(index, 1)
+        }
     }
 
 

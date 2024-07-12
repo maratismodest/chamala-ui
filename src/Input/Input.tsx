@@ -3,19 +3,15 @@ import "./Input.css";
 import classnamer from "../utils/classnamer";
 
 export interface InputProps extends ComponentPropsWithoutRef<'input'> {
-    big: boolean;
+    big?: boolean;
     placeholder: string;
     label: string;
 }
 
-const classes = ["input"];
-
-const Input: FC<InputProps> = ({big, placeholder, label, className, ...props}) => {
+const Input: FC<InputProps> = ({big = false, placeholder, label, className, ...props}) => {
+    const classes = ["input"];
     if (big) {
         classes.push("input_big");
-    }
-    if (className) {
-        classes.push(className)
     }
     return (
         <label>
