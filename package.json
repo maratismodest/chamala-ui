@@ -1,6 +1,6 @@
 {
   "name": "chamala-ui",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Chamala UI",
   "main": "./dist/index.js",
   "scripts": {
