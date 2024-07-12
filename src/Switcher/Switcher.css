@@ -32,3 +32,7 @@
     background: white;
     border: 1px solid;
 }
+
+.switcher_checked {
+    justify-content: end;
+}

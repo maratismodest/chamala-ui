@@ -1,14 +1,14 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import MyInput from "../MyInput/MyInput";
+import Input from "../Input/Input";
 
 export default {
-    title: 'Example/MyInput',
-    component: MyInput,
-} as ComponentMeta<typeof MyInput>;
+    title: 'Example/Input',
+    component: Input,
+} as ComponentMeta<typeof Input>;
 
-const Template: ComponentStory<typeof MyInput> = (args) => <MyInput {...args} />;
+const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
 
 export const SmallInput = Template.bind({});
 SmallInput.args = {
