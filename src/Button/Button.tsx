@@ -18,7 +18,7 @@ export default function Button({children, className, color, big, ...props}: Butt
     }
 
     return (
-        <button {...props} className={classnamer(classes)} style={{color}}>
+        <button className={classnamer(classes)} style={{color}} {...props}>
             {children}
         </button>
     );
