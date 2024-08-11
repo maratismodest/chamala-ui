@@ -1,10 +1,8 @@
-### Install the UI
-```npm install chamala-ui```
+## A template to create your own UI.
 
-### Add the UI css to the root of your project
-
-<code>import from "chamala-ui/dist/styles.css"</code>
-
-### Enjoy
-
-<code>import {Button, Input} from "chamala-ui"</code>
+* Clone the repository
+* Add you changes
+* Login to npm.js account
+```npm login```
+* Publish after the changes
+```npm publish```
