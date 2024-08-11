@@ -1,14 +1,29 @@
 import React, { ComponentPropsWithRef } from "react";
-import "./Input.css";
+import styles from "./Input.module.css";
+import classnamer from "../helpers/classnamer";
 
-export interface InputProps extends ComponentPropsWithRef<"input"> {}
+export interface InputProps extends ComponentPropsWithRef<"input"> {
+  big?: boolean;
+}
 
 export const Input: React.FC<InputProps> = (props) => {
-  const { className, children, onChange, ref, value, placeholder, ...rest } =
-    props;
+  const {
+    big,
+    className,
+    children,
+    onChange,
+    ref,
+    value,
+    placeholder,
+    ...rest
+  } = props;
   return (
     <input
-      className={["input", className].join(" ")}
+      className={classnamer([
+        styles.input,
+        big && styles.input__big,
+        className,
+      ])}
       onChange={onChange}
       placeholder={placeholder}
       ref={ref}

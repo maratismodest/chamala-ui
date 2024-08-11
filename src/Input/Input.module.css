@@ -1,0 +1,16 @@
+.input {
+    border: 2px solid #c6c6c6;
+    border-radius: 4px;
+    padding: 8px 16px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+.input:focus {
+    border: 2px solid #40ba21;
+}
+
+.input__big {
+    padding: 16px 16px;
+}

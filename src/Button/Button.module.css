@@ -1,0 +1,11 @@
+.button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: white;
+    border: 1px solid #40ba21;
+    background: #40ba21;
+}
+
+.button__big {
+    padding: 16px 16px;
+}

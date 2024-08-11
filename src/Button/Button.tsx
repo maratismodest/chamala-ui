@@ -1,13 +1,20 @@
 import React, { ComponentPropsWithRef } from "react";
-import "./Button.css";
+import styles from "./Button.module.css";
+import classnamer from "../helpers/classnamer";
 
-export interface ButtonProps extends ComponentPropsWithRef<"button"> {}
+export interface ButtonProps extends ComponentPropsWithRef<"button"> {
+  big?: boolean;
+}
 
 export const Button: React.FC<ButtonProps> = (props) => {
-  const { className, children, onClick, ref, ...rest } = props;
+  const { big = false, className, children, onClick, ref, ...rest } = props;
   return (
     <button
-      className={["button", className].join(" ")}
+      className={classnamer([
+        styles.button,
+        big && styles.button__big,
+        className,
+      ])}
       onClick={onClick}
       {...rest}
       ref={ref}

@@ -21,6 +21,7 @@ export default {
     commonjs(),
     resolve(),
     postcss({
+      modules: true,
       extensions: [".css"],
       extract: "styles.css",
       minimize: true,

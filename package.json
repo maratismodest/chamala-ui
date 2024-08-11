@@ -1,6 +1,6 @@
 {
   "name": "chamala-ui",
-  "version": "1.2.20",
+  "version": "1.4.1",
   "description": "A simple UI library",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -11,7 +11,6 @@
   "scripts": {
     "build": "rollup -c",
     "prepublishOnly": "npm run build",
-    "publish": "npm publish",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
