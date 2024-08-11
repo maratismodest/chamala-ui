@@ -1,28 +1,19 @@
-import React, {ComponentPropsWithoutRef, FC} from "react";
+import React, { ComponentPropsWithRef } from "react";
 import "./Input.css";
-import classnamer from "../utils/classnamer";
 
-export interface InputProps extends ComponentPropsWithoutRef<'input'> {
-    big?: boolean;
-    placeholder: string;
-    label: string;
-}
+export interface InputProps extends ComponentPropsWithRef<"input"> {}
 
-const Input: FC<InputProps> = ({big = false, placeholder, label, className, ...props}) => {
-    const classes = ["input"];
-    if (big) {
-        classes.push("input_big");
-    }
-    return (
-        <label>
-            {label}
-            <input
-                className={classnamer(classes)}
-                placeholder={placeholder}
-                {...props}
-            />
-        </label>
-    );
+export const Input: React.FC<InputProps> = (props) => {
+  const { className, children, onChange, ref, value, placeholder, ...rest } =
+    props;
+  return (
+    <input
+      className={["input", className].join(" ")}
+      onChange={onChange}
+      placeholder={placeholder}
+      ref={ref}
+      value={value}
+      {...rest}
+    />
+  );
 };
-
-export default Input;

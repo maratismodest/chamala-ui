@@ -1,21 +1,18 @@
-import React, {ComponentPropsWithoutRef} from "react";
+import React, { ComponentPropsWithRef } from "react";
 import "./Button.css";
-import classnamer from "../utils/classnamer";
 
-export interface ButtonProps extends ComponentPropsWithoutRef<'button'> {
-    color?: string;
-    big?: boolean;
-}
+export interface ButtonProps extends ComponentPropsWithRef<"button"> {}
 
-export default function Button({children, className, color, big, ...props}: ButtonProps) {
-    const classes = ["button"];
-    if (big) {
-        classes.push("button_big");
-    }
-
-    return (
-        <button className={classnamer(classes)} style={{color}} {...props}>
-            {children}
-        </button>
-    );
+export const Button: React.FC<ButtonProps> = (props) => {
+  const { className, children, onClick, ref, ...rest } = props;
+  return (
+    <button
+      className={["button", className].join(" ")}
+      onClick={onClick}
+      {...rest}
+      ref={ref}
+    >
+      {children}
+    </button>
+  );
 };
