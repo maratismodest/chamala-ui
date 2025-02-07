@@ -1,6 +1,6 @@
 {
   "name": "chamala-ui",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "A simple UI library",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
