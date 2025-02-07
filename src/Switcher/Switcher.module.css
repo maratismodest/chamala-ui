@@ -23,6 +23,7 @@
     width: 44px;
     border-radius: 12px;
     background: #FA0000;
+    transition: all 0.1s;
 }
 
 .switcher_checked {

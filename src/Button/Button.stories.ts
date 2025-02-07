@@ -11,6 +11,7 @@ const meta = {
   tags: ["autodocs"],
   args: {
     children: "Click me",
+    big: false,
     className: "",
   },
   argTypes: {
