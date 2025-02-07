@@ -14,5 +14,7 @@
 * Add you changes
 * Login to npm.js account
 ```npm login```
+* Patch the version
+```npm version patch```
 * Publish after the changes
 ```npm publish```
